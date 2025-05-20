@@ -13,6 +13,14 @@ public class Main {
         Elevador.Sair();
         Elevador.Sair(); 
         Elevador.Sair();
+        Elevador.Subir();
+        Elevador.Subir();
+        Elevador.Subir();
+        Elevador.Subir();
+        Elevador.Subir();
+        Elevador.Descer();
+        Elevador.Descer();
+        Elevador.Descer();
         System.out.println("Andar Atual: " + Elevador.getAndarAtual() +
                              "Pessoas no elevador: " + Elevador.getPessoasPresente());
 
