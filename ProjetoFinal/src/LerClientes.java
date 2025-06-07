@@ -29,7 +29,8 @@ public class LerClientes {
                 cliente.setCEP(partes[12]);
                 cliente.setCategoria(partes[13]);
                 cliente.setValidade(partes[14]);
-
+                cliente.setRG(partes[15]);
+                cliente.setNumcnh(partes[16]);
                 clientes.add(cliente);
             }
             leitor.close();
