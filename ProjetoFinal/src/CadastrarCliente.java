@@ -1,3 +1,4 @@
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -15,6 +16,7 @@ public class CadastrarCliente {
         registro.setIdade(registro.validarIdade("Digite sua idade: "));
         String cpf = registro.lerCPF("Digite seu CPF: ");
         registro.setCPF(cpf);
+        registro.setRG(registro.validarCampoVazio("Digite seu RG: "));
 
         registro.setNacionalidade(registro.validarCampoVazio("Digite sua nacionalidade:"));
         registro.setEndereco(registro.validarCampoVazio("Digite seu endereço:"));
@@ -32,6 +34,7 @@ public class CadastrarCliente {
         registro.setProfissao(registro.validarCampoVazio("Digite sua profissão:"));
         registro.setEmail(registro.validarCampoVazio("Digite seu email:"));
         registro.setCEP(registro.validarCampoVazio("Digite seu CEP:"));
+        registro.setNumcnh(registro.validarCampoVazio("Digite o numero da sua CNH"));
         registro.setCategoria(registro.validarCampoVazio("Digite a categoria da CNH:"));
         registro.setValidade(registro.lerData("Digite a validade da CNH: "));
 
@@ -44,9 +47,9 @@ public class CadastrarCliente {
     }
 
     public static void gravar(Registro registro) {
-        try {
-            FileWriter escritor = new FileWriter("Clientes.txt", true);
-            escritor.write(registro.ExibirCliente() + "\n");
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter("Clientes.txt", true))){
+            escritor.write(registro.ExibirCliente());
+            escritor.newLine();
             escritor.close();
         } catch (IOException e) {
             System.out.println("Erro ao gravar cliente no arquivo.");
