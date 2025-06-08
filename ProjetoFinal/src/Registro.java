@@ -19,25 +19,29 @@ public class Registro {
     private String validade;
     private String id;
 
-    public Registro(String id, String nome, String dataNascimento, int idade, String CPF, String nacionalidade,
-            String endereco, String telefone1, String telefone2, String estadoCivil, String profissao,
-            String email, String CEP, String categoria, String validade) {
+    public Registro(String id, String nome, String dataNascimento, int idade, String CPF, String RG,
+                    String estadoCivil, String nacionalidade, String endereco,
+                    String telefone1, String telefone2, String email, String CEP,
+                    String profissao, String numcnh, String categoria, String validade) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.idade = idade;
         this.CPF = CPF;
+        this.RG = RG;
+        this.estadoCivil = estadoCivil;
         this.nacionalidade = nacionalidade;
         this.endereco = endereco;
         this.telefone1 = telefone1;
         this.telefone2 = telefone2;
-        this.estadoCivil = estadoCivil;
-        this.profissao = profissao;
         this.email = email;
         this.CEP = CEP;
+        this.profissao = profissao;
+        this.numcnh = numcnh;
         this.categoria = categoria;
         this.validade = validade;
     }
+    
 
     public Registro() {
     }
@@ -111,25 +115,23 @@ public class Registro {
 
 
     public String ExibirCliente() {
-    return "----------------------------------------" +
-           "\nID: " + id +
-           "\nNome: " + nome +
-           "\nIdade: " + idade +
-           "\nData de Nascimento: " + dataNascimento +
-           "\nCPF: " + CPF +
-           "\nRG: " + RG +
-           "\nEstado Civil: " + estadoCivil +
-           "\nNacionalidade: " + nacionalidade +
-           "\nProfissão: " + profissao +
-           "\nEndereço: " + endereco +
-           "\nCEP: " + CEP +
-           "\nTelefone 1: " + telefone1 +
-           "\nTelefone 2: " + telefone2 +
-           "\nEmail: " + email +
-           "\nNúmero da CNH: " + numcnh +
-           "\nCategoria da CNH: " + categoria +
-           "\nValidade da CNH: " + validade +
-           "\n----------------------------------------";
+    return id + ";" +
+           nome + ";" +
+           dataNascimento + ";" +
+           idade + ";" +
+           CPF + ";" +
+           RG + ";" +
+           nacionalidade + ";" +
+           endereco + ";" +
+           telefone1 + ";" +
+           telefone2 + ";" +
+           estadoCivil + ";" +
+           profissao + ";" +
+           email + ";" +
+           CEP + ";" +
+           numcnh + ";" +
+           categoria + ";" +
+           validade;
 }
 
 
