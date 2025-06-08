@@ -5,11 +5,10 @@ public class ListaClientes {
         
         LerClientes lerarquivo = new LerClientes();
         ArrayList<Registro> clientes = lerarquivo.lerClientesDoArquivo();
-        Registro registro = new Registro();
 
         System.out.println("\n==== CLIENTES LIDOS ====");
         for (Registro c : clientes) {
-            registro.ExibirCliente();
+            System.out.println(c.ExibirCliente());
         }
     }
 }
