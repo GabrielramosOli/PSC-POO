@@ -12,15 +12,14 @@ public class BuscarClienteId {
 
         String iddebusca;
         System.out.println("Escreva por qual ID você deseja buscar: ");
-        iddebusca = sc.next();
+        iddebusca = sc.next().trim();
 
         System.out.println("\n==== CLIENTE ENCONTRADO ====");
         for (Registro c : clientes) {
             if (iddebusca.equals(c.getid())) {
-                registro.ExibirCliente();
+                System.out.println(c.ExibirCliente());
             }
         }
-        sc.close();
     }
 
     
