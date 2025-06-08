@@ -1,18 +1,22 @@
-## Getting Started
+RESUMO DE USO DO SISTEMA DE CLIENTES EM JAVA
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um sistema em Java para cadastro e gerenciamento de clientes. Ele permite adicionar, listar, buscar por ID, editar e excluir clientes, com os dados armazenados em um arquivo de texto chamado cliente.txt.
 
-## Folder Structure
+REQUISITOS:
+- Ter o Java JDK instalado (versão 11 ou superior)
+- Usar um terminal, ou uma IDE como VS Code, Eclipse ou IntelliJ
 
-The workspace contains two folders by default, where:
+COMO COMPILAR:
+1. Abra o terminal na pasta onde estão os arquivos .java
+2. Compile todos os arquivos com o comando:
+   javac *.java
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+COMO EXECUTAR:
+Após a compilação, execute o menu principal com:
+- java Menu
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+SOBRE O ARQUIVO cliente.txt:
+- Fica salvo na mesma pasta do projeto
+- Cada cliente é salvo em uma linha com os campos separados por ;
+- A ordem dos campos no arquivo é:
+  ID;Nome;DataNascimento;Idade;CPF;Nacionalidade;Endereco;Telefone1;Telefone2;EstadoCivil;RG;NumeroCNH;Email;ValidadeCNH;CEP;CategoriaCNH;Profissao
