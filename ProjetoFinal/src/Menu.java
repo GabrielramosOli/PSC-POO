@@ -44,6 +44,6 @@ public class Menu {
             }
 
         } while (escolha != 6);
-        sc.close();
+        
     }
 }
